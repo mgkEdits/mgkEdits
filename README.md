@@ -2,7 +2,7 @@
 -        screenName @MgkEdits
 - 👀 I’m interested in building solutions, systems and increasing efficiency
 -  I`m conversant in HTML, CSS, Javascript, React, Python and Flask Framework.
--       Complex problems once brocken down require simple solutions
+-       Complex problems once broken down require simple solutions
           -mgkEdits-
 - 📫 How to reach me
 -         email elijahnyasiando.mn@gmail.com
