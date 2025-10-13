@@ -1,16 +1,32 @@
 # Hi, I'm Elijah Nyasiando Mogaka 👋
 
 <a href="https://www.linkedin.com/in/elijah-nyasiando-970982297/">
-  <img align="left" alt="Elijah's LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
+  <img align="left" alt="Elijah's LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /> LinkedIn Profile
 </a>
 <br/>
 <br/>
 
-I am an analytical and results-driven Software Developer with a passion for building robust applications and deriving data-driven insights. My experience spans the full stack, from engineering complex data models in Python to building responsive user interfaces in React. I am driven by a problem-solving mindset and a commitment to quality.
+I am an analytical and results-driven Software Developer with a passion for building robust, data-centric applications. My journey in technology has taken me through the full software lifecycle, from architecting backend systems and data models in Python to building responsive user interfaces in React and ensuring their quality through rigorous testing. I thrive on solving complex problems and transforming data into actionable insights.
+
 
 ---
 
-### 🔧 Technologies & Tools
+### 💻 My Core Competencies & Technologies
+
+My experience is centered around these key areas:
+
+*   **Data Science & Machine Learning:** Building data pipelines and applying statistical models to extract insights.
+    *   `Python` `pandas` `scikit-learn` `statsmodels` `numpy` `seaborn`
+
+*   **Backend Development:** Designing and building RESTful APIs and managing databases.
+    *   `Python` `Flask` `SQL` `MySQL` `RESTful APIs`
+
+*   **Frontend Development:** Crafting dynamic and user-friendly single-page applications.
+    *   `React` `JavaScript (ES6+)` `HTML5` `CSS3` `Responsive Design`
+
+*   **Quality Assurance & DevOps:** A strong focus on testing, reliability, and automation.
+    *   `Manual & Exploratory Testing` `Root Cause Analysis` `Git` `GitHub` `CI/CD Concepts` `Selenium (Learning)`
+    *   
 
 <p align="left">
   <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
@@ -25,9 +41,20 @@ I am an analytical and results-driven Software Developer with a passion for buil
 
 ---
 
+### 🚀 Projects & Professional Growth
+
+My projects have been the cornerstone of my growth, each one teaching me critical lessons in building real-world applications:
+
+*   In my **Credit Risk Modeling** project, I engineered a data pipeline for over 3 million records. This taught me the importance of data integrity and the power of machine learning to derive insights that drive strategic decisions.
+
+*   Building the **ScheduleNest Calendar App** was a deep dive into full-stack development. I learned how to seamlessly integrate a React frontend with a Python backend, focusing on creating a robust API and a great user experience.
+
+*   My work in **IT Support** was a practical lesson in Quality Assurance. It trained me to be a master of troubleshooting and root cause analysis, giving me a unique perspective on how to build more resilient and user-friendly software from the ground up.
+
+---
+
 ### 🌱 My Current Focus
--   Deepening my expertise in **Test Automation** frameworks like Selenium.
--   Exploring scalable backend architectures and **Cloud/DevOps** practices.
+-   Deepening my expertise in **Test Automation** frameworks to build more reliable software.
 -   Contributing to projects at the intersection of **Fintech and Healthcare technology**.
 
 ---
