@@ -1,6 +1,6 @@
 # Hi, I'm Elijah Nyasiando Mogaka 👋
 
-<a href="https://www.linkedin.com/in/Elijah-Nyasiando/">
+<a href="https://www.linkedin.com/in/elijah-nyasiando-970982297/">
   <img align="left" alt="Elijah's LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
 </a>
 <br/>
