@@ -61,7 +61,7 @@ My projects have been the cornerstone of my growth, each one teaching me critica
 
 ### 📫 How to Reach Me
 -   Connect with me on [LinkedIn](https://www.linkedin.com/in/elijah-nyasiando-970982297/)
--   Email me at [elijahnyasiando.mn@gmail.com](mailto:elijahnyasiando.mn@gmail.com)
+-   Email me at [elijahmogaka.mn@yahoo.com](mailto:elijahmogaka.mn@yahoo.com)
 
 <!---
 [![Elijah's GitHub stats](https://github-readme-stats.vercel.app/api?username=mgkEdits&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
