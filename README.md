@@ -1,5 +1,5 @@
 # Elijah Nyasiando Mogaka | Software Engineer & Data Analyst
-### MSCS Candidate @ [University Name] | Specialized in Predictive Analytics & Machine Learning
+
 
 <p align="left">
 <a href="https://www.linkedin.com/in/elijah-nyasiando-970982297/">
