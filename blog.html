@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Elijah Nyasiando</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card-bg: #111;
+            --accent: #10b981;
+            --text: #ffffff;
+            --text-dim: #a1a1aa;
+            --border: #27272a;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            margin: 0; 
+            padding: 0;
+        }
+
+        nav {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; text-decoration: none; color: white; }
+
+        .container { max-width: 900px; margin: 4rem auto; padding: 0 2rem; }
+        h1 { font-size: 3rem; letter-spacing: -2px; margin-bottom: 3rem; }
+
+        /* Blog Grid */
+        .blog-list { display: grid; gap: 2rem; }
+        .blog-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .blog-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+        .blog-date { color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+        .blog-card h2 { margin: 0.5rem 0; font-size: 1.5rem; }
+        .blog-card p { color: var(--text-dim); margin: 0; }
+
+        /* Modal / Popup Styling */
+        .modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 1rem;
+        }
+        .modal-content {
+            background: #161616;
+            max-width: 800px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 3rem;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        .close-btn {
+            position: sticky;
+            top: 0;
+            float: right;
+            font-size: 2rem;
+            color: var(--text-dim);
+            cursor: pointer;
+            margin-top: -1rem;
+        }
+        .close-btn:hover { color: var(--accent); }
+        .modal-body h2 { font-size: 2.5rem; letter-spacing: -1.5px; margin-bottom: 1rem; }
+        .modal-body { line-height: 1.8; color: #d4d4d8; }
+        .modal-body h3 { color: var(--accent); margin-top: 2rem; }
+
+        @media (max-width: 600px) {
+            .modal-content { padding: 1.5rem; }
+            h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">MOGAKA.</a>
+        <a href="index.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.9rem;">← Back</a>
+    </nav>
+
+    <div class="container">
+        <h1>Insights & <br><span style="color: var(--accent);">Technical Writing</span></h1>
+        
+        <div class="blog-list" id="blog-container">
+            <!-- Articles will be injected here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalBody" class="modal-body">
+                <!-- Full blog content goes here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Link your "Text File" (Data File) here -->
+    <script src="blog-data.js"></script>
+
+    <script>
+        // Function to display the list of blogs
+        function displayBlogs() {
+            const container = document.getElementById('blog-container');
+            container.innerHTML = blogPosts.map(post => `
+                <div class="blog-card" onclick="openModal(${post.id})">
+                    <span class="blog-date">${post.date}</span>
+                    <h2>${post.title}</h2>
+                    <p>${post.summary}</p>
+                </div>
+            `).join('');
+        }
+
+        // Function to open the popup
+        function openModal(id) {
+            const post = blogPosts.find(p => p.id === id);
+            const modal = document.getElementById('blogModal');
+            const body = document.getElementById('modalBody');
+            
+            body.innerHTML = `
+                <span style="color: var(--accent); font-weight: 700; font-size: 0.9rem;">${post.date}</span>
+                <h2>${post.title}</h2>
+                <hr style="border: 0; border-top: 1px solid var(--border); margin: 2rem 0;">
+                ${post.content}
+            `;
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        // Function to close the popup
+        function closeModal() {
+            document.getElementById('blogModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal if user clicks outside the box
+        window.onclick = function(event) {
+            const modal = document.getElementById('blogModal');
+            if (event.target == modal) { closeModal(); }
+        }
+
+        // Run on page load
+        displayBlogs();
+    </script>
+</body>
+</html>
