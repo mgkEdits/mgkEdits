@@ -3,260 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elijah Nyasiando Mogaka | Portfolio</title>
+    <title>Elijah Nyasiando | Data & Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <style>
-        /* --- CSS VARIABLES & RESET --- */
         :root {
-            --bg-color: #ffffff;
-            --text-main: #1a1a1a;
-            --text-muted: #555555;
-            --accent: #2563eb; /* Clean Blue */
-            --border: #e5e5e5;
-            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --bg: #0a0a0a;
+            --card-bg: #111111;
+            --text: #ffffff;
+            --text-dim: #a1a1aa;
+            --accent: #10b981; /* Electric Emerald */
+            --border: #27272a;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: var(--font-family);
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text); 
             line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg-color);
+            overflow-x: hidden;
         }
 
-        /* --- LAYOUT --- */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        header {
-            padding: 4rem 0 2rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
+        /* --- Navigation --- */
         nav {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
-            z-index: 100;
-        }
-
-        nav ul {
+            padding: 2rem;
             display: flex;
-            justify-content: center;
-            list-style: none;
-            gap: 2rem;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
         }
-
-        nav a {
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; }
+        .nav-links a {
             text-decoration: none;
-            color: var(--text-main);
+            color: var(--text-dim);
+            margin-left: 2rem;
+            font-size: 0.9rem;
             font-weight: 500;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        .btn-contact {
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            color: var(--accent) !important;
         }
 
-        /* --- TYPOGRAPHY --- */
-        h1 { font-size: 2.5rem; letter-spacing: -1px; margin-bottom: 0.5rem; }
-        h2 { font-size: 1.5rem; margin: 2rem 0 1rem 0; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
-        h3 { font-size: 1.2rem; margin-bottom: 0.2rem; }
-        .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1rem; }
-        .date { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; display: block; }
+        /* --- Hero Section --- */
+        section { padding: 8rem 2rem 4rem; max-width: 1100px; margin: 0 auto; }
+        
+        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
+        .hero h1 { 
+            font-size: clamp(3rem, 8vw, 5rem); 
+            line-height: 1; 
+            font-weight: 800; 
+            letter-spacing: -3px;
+            margin-bottom: 2rem;
+        }
+        .hero h1 span { color: var(--accent); }
+        .hero-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .hero-meta p { font-size: 1.2rem; color: var(--text-dim); }
 
-        /* --- SECTIONS --- */
-        section { padding: 4rem 0; border-bottom: 1px solid var(--border); }
-        .summary { font-size: 1.1rem; color: var(--text-muted); max-width: 700px; }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+        /* --- Experience Cards --- */
+        .section-title { 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            color: var(--accent); 
+            margin-bottom: 3rem;
+            display: block;
         }
 
-        .skill-category { margin-bottom: 1.5rem; }
-        .skill-category strong { display: block; margin-bottom: 0.5rem; }
-
-        /* --- CONTACT FORM --- */
-        .contact-container { max-width: 600px; margin: 0 auto; }
-        
-        .form-group { margin-bottom: 1.5rem; }
-        label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; }
-        
-        input, select, textarea {
-            width: 100%;
-            padding: 0.8rem;
+        .exp-grid { display: grid; gap: 2rem; }
+        .exp-card {
+            background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: transform 0.3s, border-color 0.3s;
         }
+        .exp-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .exp-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .exp-card .company { color: var(--accent); font-weight: 600; margin-bottom: 1rem; display: block; }
+        .exp-card ul { list-style: none; color: var(--text-dim); }
+        .exp-card li { margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem; }
+        .exp-card li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
 
-        textarea { height: 150px; resize: vertical; }
-
-        button {
-            background: var(--text-main);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            width: 100%;
-            transition: opacity 0.2s;
-        }
-
-        button:hover { opacity: 0.9; }
-
-        .contact-info {
-            margin-top: 2rem;
-            text-align: center;
+        /* --- Skills Tag Cloud --- */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 1rem; }
+        .skill-tag {
+            background: var(--border);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
             font-size: 0.9rem;
-            color: var(--text-muted);
+            font-weight: 500;
         }
 
-        /* --- MOBILE RESPONSIVE --- */
+        footer { text-align: center; padding: 4rem; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); }
+
+        /* --- Responsive --- */
         @media (max-width: 768px) {
-            .grid { grid-template-columns: 1fr; }
-            h1 { font-size: 2rem; }
-            nav ul { gap: 1rem; }
-            nav a { font-size: 0.8rem; }
+            .hero-meta { grid-template-columns: 1fr; gap: 2rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
+            .hero h1 { font-size: 3.5rem; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="logo">EM.</div>
+        <div class="nav-links">
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="contact.html" class="btn-contact">Hire Me</a>
         </div>
     </nav>
 
-    <header id="home">
-        <div class="container">
-            <h1>Elijah Nyasiando Mogaka</h1>
-            <p class="subtitle">Data Analyst | Software Engineer</p>
-            <p class="summary">
-                Analytical Software Developer and Master’s student specializing in Machine Learning. 
-                Expert in SQL and data transformation, focused on building predictive models and 
-                translating complex datasets into actionable insights.
-            </p>
+    <section class="hero">
+        <h1>Data Analyst <span>+</span><br>Software Engineer</h1>
+        <div class="hero-meta">
+            <p>Elijah Nyasiando Mogaka. Specializing in Machine Learning and financial risk modeling. I bridge the gap between complex datasets and actionable business logic.</p>
+            <div>
+                <p style="font-size: 0.9rem; color: var(--accent);">CURRENTLY FOCUSING ON</p>
+                <p>Msc Computational Intelligence @ UoN</p>
+            </div>
         </div>
-    </header>
+    </section>
 
     <section id="experience">
-        <div class="container">
-            <h2>Professional Experience</h2>
-            
-            <div class="job">
-                <h3>IT Officer (Systems & Integration)</h3>
-                <span class="date">Ministry of Education | May 2024 – May 2025</span>
+        <span class="section-title">Selected Experience</span>
+        <div class="exp-grid">
+            <div class="exp-card">
+                <span class="company">Ministry of Education | 2024 - 2025</span>
+                <h3>IT Officer (Systems Support)</h3>
                 <ul>
-                    <li>Led onboarding of teachers to NEMIS and TIMS systems.</li>
-                    <li>Monitored data entry consistency and proposed process improvements.</li>
-                    <li>Conducted root cause analysis on hardware and connectivity issues.</li>
+                    <li>Onboarded administrators to NEMIS/TIMS enterprise systems.</li>
+                    <li>Reduced data entry bottlenecks through process improvement.</li>
+                    <li>Infrastructure root cause analysis for digital literacy tools.</li>
                 </ul>
             </div>
-
-            <div class="job" style="margin-top: 2rem;">
-                <h3>Lead Technical Analyst & Developer</h3>
-                <span class="date">Volunteer Projects | Jan 2025 – Present</span>
+            <div class="exp-card">
+                <span class="company">Volunteer Projects | Jan 2025 - Present</span>
+                <h3>Lead Technical Analyst</h3>
                 <ul>
-                    <li>Automated financial workflows for ETFS Project, ensuring 100% data consistency.</li>
-                    <li>Translated operational pain points into technical specifications.</li>
-                    <li>Developed custom analytical reports for project performance monitoring.</li>
+                    <li>Automated financial trust fund workflows (ETFS Project).</li>
+                    <li>Primary liaison between business pain points and ICT delivery.</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="skills">
-        <div class="container">
-            <h2>Core Skills</h2>
-            <div class="grid">
-                <div class="skill-category">
-                    <strong>Data & Analysis</strong>
-                    <p>SQL (PostgreSQL/MySQL), Python, Power BI, Advanced Excel, KPIs & Dashboards.</p>
-                </div>
-                <div class="skill-category">
-                    <strong>Software & Systems</strong>
-                    <p>ERP Logic (Odoo/D365), REST API, System Auditing, Git, Postman.</p>
-                </div>
-                <div class="skill-category">
-                    <strong>Business Analysis</strong>
-                    <p>Process Mapping, Requirement Elicitation (BRDs/FSDs), Root Cause Analysis.</p>
-                </div>
-                <div class="skill-category">
-                    <strong>Education</strong>
-                    <p>MSc Computer Science (UoN), Software Engineering (Moringa), BSc Computer Technology (MMU).</p>
-                </div>
-            </div>
+        <span class="section-title">Technical Stack</span>
+        <div class="skills-container">
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">SQL (PostgreSQL/MySQL)</div>
+            <div class="skill-tag">Power BI</div>
+            <div class="skill-tag">Machine Learning</div>
+            <div class="skill-tag">ERP Logic (Odoo/D365)</div>
+            <div class="skill-tag">REST APIs</div>
+            <div class="skill-tag">Process Mapping</div>
+            <div class="skill-tag">Requirement Elicitation</div>
         </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Engage My Services</h2>
-            <div class="contact-container">
-                <!-- Replace 'your-formspree-id' with the ID you get from formspree.io -->
-                <form action="https://formspree.io/f/mnjwzkdp" method="POST">
-                    
-                    <div class="form-group">
-                        <label for="service">I am looking for:</label>
-                        <select name="service" id="service" required>
-                            <option value="" disabled selected>Select a service</option>
-                            <option value="Product Development">Product Development / Design</option>
-                            <option value="Data Analytics">Data Analytics</option>
-                            <option value="Collaboration">Collaboration Request</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" id="name" placeholder="John Doe" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" name="_replyto" id="email" placeholder="john@example.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" placeholder="How can I help you?" required></textarea>
-                    </div>
-
-                    <button type="submit">Send Message</button>
-                </form>
-
-                <div class="contact-info">
-                    <p>📞 (+254) 714 424 587</p>
-                    <p>📧 elijahnyasiando.mn@gmail.com</p>
-                    <p>📍 Nairobi, Kenya</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.8rem;">
-        &copy; 2025 Elijah Nyasiando Mogaka. Built with Minimalist HTML/CSS.
+    <footer>
+        &copy; 2025 ELIJAH NYASIANDO MOGAKA • DESIGNED FOR PERFORMANCE
     </footer>
 
 </body>
