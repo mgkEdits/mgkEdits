@@ -6,7 +6,7 @@
     <title>Elijah Nyasiando | Data & Software</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #0a0a0a;
@@ -18,6 +18,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: var(--bg); 
@@ -28,7 +29,7 @@
 
         /* --- Navigation --- */
         nav {
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -37,146 +38,218 @@
             top: 0;
             z-index: 1000;
             background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
         }
         .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; }
         .nav-links a {
             text-decoration: none;
             color: var(--text-dim);
             margin-left: 2rem;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.3s;
         }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        .nav-links a:hover { color: var(--accent); }
         .btn-contact {
             border: 1px solid var(--accent);
-            padding: 0.5rem 1.2rem;
-            border-radius: 5px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
             color: var(--accent) !important;
         }
 
         /* --- Hero Section --- */
         section { padding: 8rem 2rem 4rem; max-width: 1100px; margin: 0 auto; }
         
-        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
+        .hero { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; }
         .hero h1 { 
-            font-size: clamp(3rem, 8vw, 5rem); 
-            line-height: 1; 
+            font-size: clamp(2.5rem, 8vw, 5rem); 
+            line-height: 1.1; 
             font-weight: 800; 
             letter-spacing: -3px;
             margin-bottom: 2rem;
         }
         .hero h1 span { color: var(--accent); }
-        .hero-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-        .hero-meta p { font-size: 1.2rem; color: var(--text-dim); }
+        .hero-meta { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; }
+        .hero-meta p { font-size: 1.2rem; color: var(--text-dim); font-weight: 300; }
 
-        /* --- Experience Cards --- */
         .section-title { 
-            font-size: 0.8rem; 
+            font-size: 0.75rem; 
             text-transform: uppercase; 
             letter-spacing: 4px; 
             color: var(--accent); 
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             display: block;
+            font-weight: 700;
         }
 
-        .exp-grid { display: grid; gap: 2rem; }
+        /* --- Experience Cards --- */
+        .exp-grid { display: grid; gap: 1.5rem; }
         .exp-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
             padding: 2.5rem;
             border-radius: 12px;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: border-color 0.4s;
         }
-        .exp-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .exp-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .exp-card .company { color: var(--accent); font-weight: 600; margin-bottom: 1rem; display: block; }
-        .exp-card ul { list-style: none; color: var(--text-dim); }
-        .exp-card li { margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem; }
-        .exp-card li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+        .exp-card:hover { border-color: var(--accent); }
+        .exp-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+        .exp-card .company { color: var(--accent); font-weight: 600; margin-bottom: 1rem; display: block; font-size: 0.9rem; }
+        .exp-card ul { list-style: none; color: var(--text-dim); font-size: 0.95rem; }
+        .exp-card li { margin-bottom: 0.6rem; position: relative; padding-left: 1.5rem; }
+        .exp-card li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
 
-        /* --- Skills Tag Cloud --- */
-        .skills-container { display: flex; flex-wrap: wrap; gap: 1rem; }
-        .skill-tag {
-            background: var(--border);
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
+        /* --- SKILLS GRID (Grouped as requested) --- */
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem; 
+        }
+        .skill-box {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+        .skill-box h4 {
             font-size: 0.9rem;
-            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
+        .tag-container { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .tag {
+            background: #1a1a1a;
+            border: 1px solid var(--border);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            transition: all 0.3s;
+        }
+        .tag:hover { border-color: var(--accent); color: var(--text); }
 
-        footer { text-align: center; padding: 4rem; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); }
+        footer { text-align: center; padding: 6rem 2rem 3rem; color: var(--text-dim); font-size: 0.8rem; letter-spacing: 1px; }
 
         /* --- Responsive --- */
         @media (max-width: 768px) {
             .hero-meta { grid-template-columns: 1fr; gap: 2rem; }
-            .nav-links { display: none; } /* Simplified for mobile */
-            .hero h1 { font-size: 3.5rem; }
+            .nav-links { display: none; } 
+            .hero h1 { font-size: 3rem; }
+            section { padding-top: 6rem; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">EM.</div>
+        <div class="logo">MOGAKA.</div>
         <div class="nav-links">
             <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="contact.html" class="btn-contact">Hire Me</a>
+            <a href="#skills">Stack</a>
+            <a href="contact.html" class="btn-contact">Get In Touch</a>
         </div>
     </nav>
 
     <section class="hero">
-        <h1>Data Analyst <span>+</span><br>Software Engineer</h1>
+        <h1>Analytical<br><span>Data</span> Specialist <span>&</span><br>Developer</h1>
         <div class="hero-meta">
-            <p>Elijah Nyasiando Mogaka. Specializing in Machine Learning and financial risk modeling. I bridge the gap between complex datasets and actionable business logic.</p>
+            <p>Elijah Nyasiando Mogaka. Proactive researcher and software engineer specializing in Machine Learning and predictive financial risk models.</p>
             <div>
-                <p style="font-size: 0.9rem; color: var(--accent);">CURRENTLY FOCUSING ON</p>
-                <p>Msc Computational Intelligence @ UoN</p>
+                <p style="font-size: 0.8rem; color: var(--accent); font-weight: 700; letter-spacing: 1px;">EDUCATION</p>
+                <p style="font-size: 1rem;">Msc Computer Science: Computational Intelligence<br><span style="color: var(--text-dim); font-size: 0.9rem;">University of Nairobi</span></p>
             </div>
         </div>
     </section>
 
     <section id="experience">
-        <span class="section-title">Selected Experience</span>
+        <span class="section-title">Professional Experience</span>
         <div class="exp-grid">
             <div class="exp-card">
-                <span class="company">Ministry of Education | 2024 - 2025</span>
-                <h3>IT Officer (Systems Support)</h3>
+                <span class="company">Ministry of Education | May 2024 – May 2025</span>
+                <h3>IT Officer (Systems & Integration)</h3>
                 <ul>
-                    <li>Onboarded administrators to NEMIS/TIMS enterprise systems.</li>
-                    <li>Reduced data entry bottlenecks through process improvement.</li>
-                    <li>Infrastructure root cause analysis for digital literacy tools.</li>
+                    <li>Led the onboarding of teachers to NEMIS and TIMS systems.</li>
+                    <li>Monitored data consistency and proposed process improvements.</li>
+                    <li>Conducted root cause analysis on connectivity and hardware deficiencies.</li>
                 </ul>
             </div>
             <div class="exp-card">
-                <span class="company">Volunteer Projects | Jan 2025 - Present</span>
-                <h3>Lead Technical Analyst</h3>
+                <span class="company">Volunteer Projects | Jan 2025 – Date</span>
+                <h3>Lead Technical Analyst & Developer</h3>
                 <ul>
-                    <li>Automated financial trust fund workflows (ETFS Project).</li>
-                    <li>Primary liaison between business pain points and ICT delivery.</li>
+                    <li>Automated manual financial workflows for the ETFS trust fund project.</li>
+                    <li>Primary liaison between business operational pain points and ICT delivery.</li>
+                    <li>Developed custom analytical reports to monitor project performance.</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="skills">
-        <span class="section-title">Technical Stack</span>
-        <div class="skills-container">
-            <div class="skill-tag">Python</div>
-            <div class="skill-tag">SQL (PostgreSQL/MySQL)</div>
-            <div class="skill-tag">Power BI</div>
-            <div class="skill-tag">Machine Learning</div>
-            <div class="skill-tag">ERP Logic (Odoo/D365)</div>
-            <div class="skill-tag">REST APIs</div>
-            <div class="skill-tag">Process Mapping</div>
-            <div class="skill-tag">Requirement Elicitation</div>
+        <span class="section-title">Technical Expertise</span>
+        <div class="skills-grid">
+            <!-- Data Analysis Group -->
+            <div class="skill-box">
+                <h4>Data Analysis & Reporting</h4>
+                <div class="tag-container">
+                    <span class="tag">SQL (Postgres/MySQL)</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Advanced Excel</span>
+                    <span class="tag">KPIs & Dashboards</span>
+                </div>
+            </div>
+
+            <!-- Systems Group -->
+            <div class="skill-box">
+                <h4>Systems & ERP</h4>
+                <div class="tag-container">
+                    <span class="tag">ERP Logic (D365/Odoo)</span>
+                    <span class="tag">REST API Integration</span>
+                    <span class="tag">System Auditing</span>
+                </div>
+            </div>
+
+            <!-- Business Group -->
+            <div class="skill-box">
+                <h4>Business Analysis</h4>
+                <div class="tag-container">
+                    <span class="tag">Process Mapping</span>
+                    <span class="tag">Visio / Lucidchart</span>
+                    <span class="tag">BRDs / FSDs</span>
+                    <span class="tag">Root Cause Analysis</span>
+                </div>
+            </div>
+
+            <!-- Tools & Infrastructure -->
+            <div class="skill-box">
+                <h4>Tools & Ops</h4>
+                <div class="tag-container">
+                    <span class="tag">Git</span>
+                    <span class="tag">JIRA (Agile/Scrum)</span>
+                    <span class="tag">Postman</span>
+                    <span class="tag">MS Azure Concepts</span>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skill-box">
+                <h4>Engagement</h4>
+                <div class="tag-container">
+                    <span class="tag">Stakeholder Management</span>
+                    <span class="tag">Requirement Elicitation</span>
+                    <span class="tag">User Training</span>
+                    <span class="tag">Onboarding</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        &copy; 2025 ELIJAH NYASIANDO MOGAKA • DESIGNED FOR PERFORMANCE
+        &copy; 2025 ELIJAH NYASIANDO MOGAKA • NAIROBI, KENYA
     </footer>
 
 </body>
