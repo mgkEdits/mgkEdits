@@ -20,7 +20,7 @@ I am a technical lead and data analyst focused on the intersection of **Software
 | :--- | :--- | :--- |
 | **SQL Specialist:** PostgreSQL, MySQL | **Backend:** Python (Flask), Node.js | **Cloud:** Google BigQuery, Azure (Learning) |
 | **Statistical Modeling:** Python, Pandas | **Frontend:** React, React Native | **DevOps:** Docker, GitHub Actions, CI/CD |
-| **Visualization:** Power BI, Metabase | **Architecture:** Modular System Design | **QA:** Root Cause Analysis, Automation |
+| **Visualization:** Power BI, Tableau, Streamlit | **Architecture:** Modular System Design | **QA:** Root Cause Analysis, Automation |
 
 ---
 
@@ -51,7 +51,6 @@ I am a technical lead and data analyst focused on the intersection of **Software
 
 ### 🌱 Current Focus & Growth
 - 🎓 **Graduate Research:** Investigating predictive modeling for financial inclusion and risk mitigation.
-- 🏗️ **Engineering Sprints:** Dedicating 25+ hours weekly to advanced SQL optimization and ML framework development.
 - 💡 **Open to:** Strategic roles in **Fintech, Data Operations, or Product Engineering** where data drives the roadmap.
 
 ---
