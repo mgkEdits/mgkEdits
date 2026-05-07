@@ -1,41 +1,51 @@
-# 🚀 Engineering & Analytics Portfolio
+# Elijah Nyasiando Mogaka | Software Engineer & Data Analyst
 
-## 🎓 Academic & Professional Profile
-I am a **Master of Science in Computer Science** candidate and a Software Developer. My daily discipline involves 4-hour coding sprints focused on **predictive analytics** and **full-stack infrastructure**. I bridge the gap between complex data modeling and scalable software solutions.
+
+<p align="left">
+<a href="https://www.linkedin.com/in/elijah-nyasiando-970982297/">
+  <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="mailto:elijahnyasiando.mn@gmail.com">
+  <img alt="Email" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+</p>
+
+I am a technical lead and data analyst focused on the intersection of **Software Engineering and Intelligence**. Currently pursuing a **Master of Science in Computer Science**, I specialize in transforming massive, unstructured datasets into actionable business logic. I bring a researcher’s rigor to data modeling and an engineer’s precision to system architecture.
 
 ---
 
-## 🛠️ Technical Stack
-| Engineering | Data Science | DevOps |
+### 🛠️ Strategic Skill Set
+
+| **Data Analysis & ML** | **Engineering & Systems** | **Cloud & Infrastructure** |
 | :--- | :--- | :--- |
-| React / React Native | Python (Scikit-Learn, Pandas) | Docker & CI/CD |
-| Node.js / Express.js | SQL (PostgreSQL, MySQL) | GitHub Actions |
-| Modular Architecture | BigQuery & Data Warehousing | Unit & Manual Testing |
+| **SQL Specialist:** PostgreSQL, MySQL | **Backend:** Python (Flask), Node.js | **Cloud:** Google BigQuery, Azure (Learning) |
+| **Statistical Modeling:** Python, Pandas | **Frontend:** React, React Native | **DevOps:** Docker, GitHub Actions, CI/CD |
+| **Visualization:** Power BI, Metabase | **Architecture:** Modular System Design | **QA:** Root Cause Analysis, Automation |
 
 ---
 
-## 💼 High-Impact Projects
+### 📈 Core Competencies & Areas of Impact
 
-### 📊 Credit Risk & Default Prediction
-> **Focus:** Machine Learning & Fintech
-> - **Scale:** Engineered a pipeline for **3M+ financial records**.
-> - **Tech:** Python, XGBoost, SHAP (Explainable AI).
-> - **Impact:** Created a transparent risk-scoring system that visualizes default probability for stakeholders.
+#### **Large-Scale Data Modeling**
+*   Expertise in engineering high-performance data pipelines capable of processing **3M+ records**.
+*   Developed predictive models for financial risk, utilizing **Explainable AI (SHAP)** to provide transparent, actionable insights into model decision-making.
 
-### 💳 Trust Fund Management System
-> **Focus:** Full-Stack Engineering & Security
-> - **Design:** Modular architecture with a React frontend and Express/Postgres backend.
-> - **Innovation:** Built a secure, phone-number-based credential system to replace traditional email-auth.
-> - **Deployment:** Fully containerized with Docker for seamless scaling.
+#### **Full-Stack Data Infrastructure**
+*   Proficient in designing modular application architectures that bridge the gap between frontend user experience and backend data integrity.
+*   Experienced in utilizing **PostgreSQL** for complex relational mapping and **Docker** for environment consistency and scalability.
 
----
-
-## 📈 Experience & Reliability
-- **IT Officer (Ministry of Education):** Managed national-level data integrity and system administration for the Digital Literacy Programme.
-- **Independent Researcher:** Currently investigating **Explainable AI** for financial inclusion in my Master's thesis.
+#### **Product & Growth Analytics**
+*   Skilled in conducting cohort analysis, user segmentation, and KPI monitoring to drive product-led growth.
+*   Analytical approach to A/B testing and statistical validation to ensure data-driven decision-making.
 
 ---
 
-## 📫 Let's Build Something
-**Email:** [elijahmogaka.mn@yahoo.com](mailto:elijahmogaka.mn@yahoo.com)  
-**Location:** Nairobi, Kenya (Open to Remote Worldwide)
+### 🌱 Current Focus & Growth
+- 🎓 **Graduate Research:** Investigating predictive modeling for financial inclusion and risk mitigation.
+- 🏗️ **Engineering Sprints:** Dedicating 25+ hours weekly to advanced SQL optimization and ML framework development.
+- 💡 **Open to:** Strategic roles in **Fintech, Data Operations, or Product Engineering** where data drives the roadmap.
+
+---
+<p align="center">
+  <i>"Turning complex data into clear strategic direction."</i>
+</p>
